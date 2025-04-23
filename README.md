@@ -1,7 +1,6 @@
-# 🖥️ MAC Address Changer
+# ![Network Icon](https://img.icons8.com/color/48/000000/network-card.png) MAC Address Changer
 
 
-![Network Icon](https://img.icons8.com/color/48/000000/network-card.png)  
 *A simple tool allows you to change your device's network interface's MAC address (the physical address assigned to your network adapter).*
 
 ---
