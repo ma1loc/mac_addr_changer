@@ -1,11 +1,11 @@
 # ![Network Icon](https://img.icons8.com/color/48/000000/network-card.png) MAC Address Changer
 
 
-*A simple tool allows you to change your device's network interface's MAC address (the physical address assigned to your network adapter).*
+**A simple tool allows you to change your device's network interface's MAC address (the physical address assigned to your network adapter).**
 
 ---
 
-## 📌 What Does This Do?
+## 📌 What Does This Tool Do?
 
 This tool lets you temporarily change the MAC address of your:
 - Ethernet connections (like `eth0`)
@@ -18,23 +18,31 @@ This tool lets you temporarily change the MAC address of your:
 ## 🚀 How to Use
 
 1. Open terminal
-2. Run this command:
+2. clone the repository
 ```bash
-sudo python3 mac_addr_changer.py -i [YOUR_INTERFACE] -m [NEW_MAC]
+git clone https://github.com/ma1loc/mac_addr_changer.git
+```
+3. go to the mac_addr_changer folder
+```bash
+cd mac_addr_changer
+```
+4. Run this command and make sure your ROOT
+```bash
+sudo python3 run.py -i [YOUR_INTERFACE] -m [NEW_MAC]
 ```
 
 ```bash
 # Change WiFi MAC address
-sudo python3 mac_address_changer.py -i wlan0 -m 00:11:22:33:44:55
+sudo python3 run.py -i wlan0 -m 00:11:22:33:44:55
 
 # Change Ethernet MAC address
-sudo python3 mac_address_changer.py -i eth0 -m 66:77:88:99:AA:BB
+sudo python3 run.py -i eth0 -m 66:77:88:99:AA:BB
 ```
 
-## 💡 Quick Help
+## 💡 Quick help about the tool options
 
 ```bash
-python3 mac_address_changer.py --help
+sudo python3 run.py --help
 ```
 
 > ⚠️ **NOTICE:** For educational research only. Use responsibly and legally.
