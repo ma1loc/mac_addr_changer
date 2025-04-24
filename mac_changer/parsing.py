@@ -17,17 +17,30 @@
 # Contains functions to validate interfaces and MAC address format && stuff
 
 import	argparse
+import	shutil
+import	sys
 import	os
 import	re
-import	sys
-import	shutil
 
 
 def	user_args():
 	parser = argparse.ArgumentParser(description="MAC Addr changer")
-	parser.add_argument("-i", "--interface", required=True, help="interface of the mac address option to upgrad its MAC address")
+	parser.add_argument("-i", "--interface", required=True, help="Interface of the mac address option to upgrad its MAC address")
 	parser.add_argument("-m", "--mac_addr", required=True, help="MAC addr to change the interface MAC address to new one")
 	return parser.parse_args()
+
+def	is_valid_input(interface, mac_addr):
+	if not check_valid_interface(interface):
+		print(color(f"[-] Invalid interface name.", "31"))
+		sys.exit(1)
+
+	if not check_interface_exists(interface):
+		print(color(f"[-] Interface {interface} not exists.", "31"))
+		sys.exit(1)
+
+	if not check_misconfigured_mac(mac_addr):
+		print(color("[!] Invalid MAC address -> (must be unicast).", "31"))
+		sys.exit(1)
 
 def	parsing_input(user_mac_addr):
 	pattern = r'^([0-9a-fA-F]{2}[:-]){5}([0-9a-fA-F]{2})$'
