@@ -42,7 +42,7 @@ def get_current_mac(interface):
 		if mac_match:
 			return (mac_match.group(1))
 		else:
-			print(color("[!] Could not read the MAC address.", "31"))
+			print(color("[!] Could not read the MAC address.", "33"))
 			sys.exit(1)
 	except subprocess.CalledProcessError as e:
 		print(color(f"Error: {e}", "31"))

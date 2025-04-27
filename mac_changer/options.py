@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # ╔══════════════════════════════════════════════════════════════════════════╗
 # ║                                                                          ║
 # ║             ███╗   ███╗ █████╗  ██╗██╗      ██████╗  ██████╗             ║
@@ -15,39 +13,7 @@
 # ║                                                                          ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-from	mac_changer.parsing import user_args
-from	mac_changer.parsing import parsing_input
-from	mac_changer.parsing import is_valid_input
-from	mac_changer.parsing import check_mac_upgraded
-from	mac_changer.parsing	import color
-from	mac_changer.execution import check_if_root
-from	mac_changer.execution import setup_new_addr
-from	mac_changer.execution import get_current_mac
-import	sys
+# options.py
+# Contains options function like: --mac_addr, --check, --random, --anonym
 
-def	main():
-	# check_if_root()
-	args = user_args()
-	
-	# here if the user use the -m, --mac_addr optoin
-	if args.mac_addr:
-		is_valid_input(args.interface, args.mac_addr)
-		old_mac = get_current_mac(args.interface)
-		if parsing_input(args.mac_addr):
-			setup_new_addr(args.mac_addr, args.interface)
-		else:
-			print(color(f"[-] MAC address {args.mac_addr} structure error.", "31"))
-			sys.exit(1)
-		new_mac = get_current_mac(args.interface)
-		check_mac_upgraded(old_mac, new_mac)
-	elif args.check:
-		own_mac = get_current_mac(args.interface)
-		print(color(f"[+] your current MAC -> {own_mac}", "92"))
-	elif args.random:
-		print("i'll add this option sooner.")
-	elif args.anonym:
-		print("i'll add this option sooner.")
-	else:
-		print("is not a mac address or is not valid option")
-if __name__ == "__main__":
-	main()
+# i'll add it sooner.
