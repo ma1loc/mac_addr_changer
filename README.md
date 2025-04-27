@@ -3,7 +3,6 @@
 
 **A simple tool allows you to change your device's network interface's MAC address (the physical address assigned to your network adapter).**
 
----
 
 ## 📌 What Does This Tool Do?
 
@@ -13,7 +12,6 @@ This tool lets you temporarily change the MAC address of your:
 
 ⚠️ **Note:** Changes disappear after reboot!
 
----
 
 ## 🚀 How to Use
 
