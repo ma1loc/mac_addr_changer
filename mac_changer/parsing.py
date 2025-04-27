@@ -26,7 +26,11 @@ import	re
 def	user_args():
 	parser = argparse.ArgumentParser(description="MAC Addr changer")
 	parser.add_argument("-i", "--interface", required=True, help="Interface of the mac address option to upgrad its MAC address")
-	parser.add_argument("-m", "--mac_addr", required=True, help="MAC addr to change the interface MAC address to new one")
+	parser.add_argument("-m", "--mac_addr", help="MAC addr to change the interface MAC address to new one")
+	# >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	parser.add_argument("--random", action="store_true", help="nothing yet!")
+	parser.add_argument("--check", action="store_true")
+	parser.add_argument("--anonym", action="store_true")
 	return parser.parse_args()
 
 def	is_valid_input(interface, mac_addr):

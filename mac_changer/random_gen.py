@@ -13,6 +13,15 @@
 # ║                                                                          ║
 # ╚══════════════════════════════════════════════════════════════════════════╝
 
-# random mac address, to add
+# random mac address --anonym future option to add sooner as possible...
+import	random
 
-# future option to add sooner as possible
+def	get_random_addr():
+	number = random.randrange(1, 100)
+	print(number)
+
+def	main():
+	get_random_addr()
+
+if __name__ == "__main__":
+	main()

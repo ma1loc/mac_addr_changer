@@ -25,7 +25,6 @@ from	mac_changer.execution import setup_new_addr
 from	mac_changer.execution import get_current_mac
 import	sys
 
-
 def	main():
 	check_if_root()
 	args = user_args()
