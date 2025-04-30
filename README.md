@@ -43,4 +43,9 @@ sudo python3 run.py -i eth0 -m 66:77:88:99:AA:BB
 sudo python3 run.py --help
 ```
 
+##  options that will be added sooner...
+- --list (list interface available)
+- --anonym --time (chose the time of the anonym change)
+
+
 > ⚠️ **NOTICE:** For educational research only. Use responsibly and legally.
