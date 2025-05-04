@@ -23,6 +23,7 @@ from	mac_changer.execution import check_if_root
 from	mac_changer.execution import setup_new_addr
 from	mac_changer.execution import get_current_mac
 from	mac_changer.random_gen import get_random_mac
+from	mac_changer.ma1loc_header import print_ma1loc
 import	time
 import	sys
 
@@ -56,8 +57,9 @@ def	random_option(interface):
 # --anonym
 def	anonym_option(interface):
 	try:
+		print_ma1loc()
 		while True:
 			random_option(interface)
-			time.sleep(1)
+			time.sleep(600)
 	except KeyboardInterrupt:
 		sys.exit(130)
