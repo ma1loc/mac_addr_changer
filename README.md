@@ -26,26 +26,36 @@ cd mac_addr_changer
 ```
 4. Run this command and make sure your ROOT
 ```bash
-sudo python3 run.py -i [YOUR_INTERFACE] -m [NEW_MAC]
+sudo python3 setup.py -i [YOUR_INTERFACE] -m [NEW_MAC]
 ```
 
 ```bash
 # Change WiFi MAC address
-sudo python3 run.py -i wlan0 -m 00:11:22:33:44:55
+sudo python3 setup.py -i wlan0 -m 00:11:22:33:44:55
 
 # Change Ethernet MAC address
-sudo python3 run.py -i eth0 -m 66:77:88:99:AA:BB
+sudo python3 setup.py -i eth0 -m 66:77:88:99:AA:BB
 ```
 
 ## 💡 Quick help about the tool options
 
 ```bash
-sudo python3 run.py --help
+sudo python3 setup.py --help
 ```
 
-##  options that will be added sooner...
-- --list (list interface available)
-- --anonym --time (chose the time of the anonym change)
+##  Additional Options
+- --check option to check the current interface MAC address
+```bash
+sudo python3 setup.py -i [your_interface] --check
+```
+- --random option gives you a random MAC addresses
+```bash
+sudo python3 setup.py -i [your_interface] --random
+```
+- --anonym option change the MAC address every 600s -> 10min
+```bash
+sudo python3 setup.py -i [your_interface] --anonym
+```
 
 
 > ⚠️ **NOTICE:** For educational research only. Use responsibly and legally.
